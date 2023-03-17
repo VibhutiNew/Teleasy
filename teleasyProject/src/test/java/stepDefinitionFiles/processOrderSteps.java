@@ -57,7 +57,7 @@ public class processOrderSteps {
 		olp.selectOrder();
 	}
 
-	@When("clicks on return and refund")
+	@And("clicks on return and refund")
 	public void clicks_on_return_and_refund() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		String parent=driver.getWindowHandle();
@@ -75,10 +75,15 @@ public class processOrderSteps {
 		olp.retandref();
 	}
 
-	@When("fill all the details")
+	@And("fill all the details")
 	public void fill_all_the_details() {
 		ProcessOrders PO=new ProcessOrders(driver);
 		PO.addallthedetails();
+	}
+	
+	@And("click on submit")
+	public void click_on_submit() {
+		ProcessOrders PO=new ProcessOrders(driver);
 		PO.submit();
 	}
 

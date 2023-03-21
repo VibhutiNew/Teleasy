@@ -7,7 +7,7 @@ Feature: To test process order functionality
     When user clicks on an order from order list
     And clicks on return and refund
     And fill all the details
-    And click on submit
+  
     
 
   
